@@ -1,0 +1,10 @@
+#formatter_ex_lib/CMakeList.txt
+
+cmake_minimum_required(VERSION 3.10)
+project(formatter_ex)
+
+add_library(formatter_ex SHARED formatter_ex.cpp formatter_ex.h)
+
+targer_include_directories(formatter_ex PUBLIC $(CMAKE_CURRENT_SOURCE_DIR))
+
+target_link_libraries(formatter_ex PUBLIC formatter)
