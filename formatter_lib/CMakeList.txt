@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSOIN 3.10)
-
 project(formatter)
 
-add_library(formatter STATIC formatter.cpp formatter.h)
+set(CMAKE_CXX_STANDART 11)
+set(CMAKE_CXX_STAMDART_REQUIRED ON)
 
-target_include_directories(formatter PUBLIC ${CMAKE_CURRENT_COURCE_DIR} )
+add_library(formatter STATIC formatter.cpp formatter.h)
+target_include_directories(formatter PUBLIC ${CMAKE_CURRENT_COURCE_DIR})
